@@ -64,6 +64,7 @@ char	**ft_split(char *str)
 	i = 0;
 	wc = 0;
 	j = 0;
+	out = NULL;
 	while (str[i])
 	{
 		while (str[i] && (str[i] == '\n'))

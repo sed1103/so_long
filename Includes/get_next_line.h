@@ -28,6 +28,5 @@ char	*ft_strjoin(char *s1, char *s2);
 void	fill_buff(char **buff, int fd);
 char	*ft_strnew(size_t size);
 char	*ft_substr(char *s, unsigned int start, size_t len, int to_free);
-char	*ft_strdup(char *s);
 
 #endif
