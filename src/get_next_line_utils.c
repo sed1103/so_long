@@ -6,13 +6,13 @@
 /*   By: skirakos <skirakos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:19:53 by skirakos          #+#    #+#             */
-/*   Updated: 2024/05/22 16:36:47 by skirakos         ###   ########.fr       */
+/*   Updated: 2024/06/03 22:16:50 by skirakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/get_next_line.h"
 
-int	ft_strlen(const char *s)
+int	ft_strlen(char *s)
 {
 	int	i;
 
@@ -20,9 +20,7 @@ int	ft_strlen(const char *s)
 	if (s == NULL)
 		return (0);
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 

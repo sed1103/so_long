@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   split.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skirakos <skirakos@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/07 15:56:04 by skirakos          #+#    #+#             */
+/*   Updated: 2024/06/07 20:14:47 by skirakos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -15,17 +27,18 @@ void	*free_all(char **out)
 	return (NULL);
 }
 
-char *ft_strncpy(char *s1, char *s2, int n)
+char	*ft_strncpy(char *s1, char *s2, int n)
 {
-	int i = -1;
+	int	i;
 
+	i = -1;
 	while (++i < n && s2[i])
 		s1[i] = s2[i];
 	s1[i] = '\0';
 	return (s1);
 }
 
-char **start_malloc(char *str, char **out, int wc, int j)
+char	**start_malloc(char *str, char **out, int wc, int j)
 {
 	int		k;
 	int		i;
@@ -59,7 +72,7 @@ char	**ft_split(char *str)
 	int		i;
 	int		j;
 	int		wc;
-	char 	**out;
+	char	**out;
 
 	i = 0;
 	wc = 0;

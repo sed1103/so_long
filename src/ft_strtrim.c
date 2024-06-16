@@ -6,7 +6,7 @@
 /*   By: skirakos <skirakos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:30:19 by skirakos          #+#    #+#             */
-/*   Updated: 2024/05/31 21:03:43 by skirakos         ###   ########.fr       */
+/*   Updated: 2024/06/07 20:15:03 by skirakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char *s1, char *set)
 	start = 0;
 	while (s1[start] && ft_check2((unsigned char *)set, s1[start]))
 		start++;
+	while (s1[start] != '\n' && start != 0)
+		start--;
 	while (end > start && ft_check2((unsigned char *)set, s1[end - 1]))
 		end--;
 	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
@@ -62,9 +64,11 @@ char	*ft_strtrim2(char *s1, char *set)
 	if (!s1 || !set)
 		return (NULL);
 	end = 0;
-	start = ft_strlen(s1);
-	while (s1[start] && ft_check2((unsigned char *)set, s1[start]))
+	start = ft_strlen(s1) - 1;
+	while (start > 0 && s1[start] && ft_check2((unsigned char *)set, s1[start]))
 		start--;
+	if (start != 0)
+		start++;
 	str = (char *)malloc(sizeof(char) * (start - end + 1));
 	if (!str)
 		return (NULL);
@@ -72,6 +76,5 @@ char	*ft_strtrim2(char *s1, char *set)
 	while (end < start)
 		str[i++] = s1[end++];
 	str[i] = '\0';
-	printf("str[i] = %s\n", str);
 	return (str);
 }

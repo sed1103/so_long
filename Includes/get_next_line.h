@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skirakos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: skirakos <skirakos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:19:40 by skirakos          #+#    #+#             */
-/*   Updated: 2024/04/23 20:19:43 by skirakos         ###   ########.fr       */
+/*   Updated: 2024/06/03 22:17:00 by skirakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # endif
 
 char	*get_next_line(int fd);
-int		ft_strlen(const char *s);
+int		ft_strlen(char *s);
 char	*ft_strjoin(char *s1, char *s2);
 void	fill_buff(char **buff, int fd);
 char	*ft_strnew(size_t size);
